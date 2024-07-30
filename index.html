@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFuture - 人工智能的未来</title>
+    <style>
+        :root {
+            --primary-color: #10a37f;
+            --text-color: #353740;
+            --background-color: #ffffff;
+        }
+        body {
+            font-family: 'Söhne', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: var(--background-color);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        .hero {
+            background-color: #f7f7f7;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0c8b6a;
+        }
+        .features {
+            padding: 80px 0;
+        }
+        .features h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .feature-item {
+            text-align: center;
+        }
+        .feature-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #f7f7f7;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">AIFuture</div>
+            <ul>
+                <li><a href="#research">研究</a></li>
+                <li><a href="#products">产品</a></li>
+                <li><a href="#company">公司</a></li>
+                <li><a href="#blog">博客</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>人工智能的未来<br>就在这里</h1>
+        <p>我们正在开发先进的AI系统，以推动人类知识和能力的边界。</p>
+        <a href="#" class="cta-button">了解更多</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>我们的核心技术</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310a37f'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" alt="深度学习">
+                <h3>深度学习</h3>
+                <p>利用最新的神经网络架构，实现复杂模式识别和预测。</p>
+            </div>
+            <div class="feature-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310a37f'%3E%3Cpath d='M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 16h-2v-2h2v2zm0-4h-2V8h2v6z'/%3E%3C/svg%3E" alt="自然语言处理">
+                <h3>自然语言处理</h3>
+                <p>打造能理解和生成人类语言的AI系统。</p>
+            </div>
+            <div class="feature-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310a37f'%3E%3Cpath d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z'/%3E%3C/svg%3E" alt="计算机视觉">
+                <h3>计算机视觉</h3>
+                <p>开发能够理解和分析视觉信息的智能系统。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 AIFuture. 保留所有权利。</p>
+    </div>
+</footer>
+</body>
+</html>
