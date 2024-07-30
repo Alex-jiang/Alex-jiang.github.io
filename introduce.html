@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAI-Teck - 公司简介</title>
+  <style>
+        :root {
+            --primary-color: #333333;
+            --secondary-color: #2ecc71;
+            --text-color: #333333;
+            --background-color: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #e0e0e0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 20px,
+                rgba(51, 51, 51, 0.05) 20px,
+                rgba(51, 51, 51, 0.05) 40px
+            );
+            animation: moveGrid 20s linear infinite;
+        }
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-color);
+            animation: fadeIn 1s ease-out 0.3s both;
+            position: relative;
+        }
+
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .about-section h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 18px;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .carousel {
+            flex: 1;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--dark-gray);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+        }
+
+        footer p {
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">NAI-Teck</a>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="#research">研究</a></li>
+        <li><a href="#products">产品</a></li>
+        <li><a href="introduce.html">公司</a></li>
+        <li><a href="modul.html">博客</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>关于 NAI-Teck</h1>
+    <p>了解我们的使命、愿景和价值观，发现我们如何引领人工智能的未来。</p>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="container">
+    <h2>公司简介</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>NAI-Teck 是一家致力于开发先进人工智能系统的科技公司。我们专注于突破性的 AI 技术研发，推动人类知识和能力的边界。</p>
+        <p>我们的使命是通过创新和卓越的技术解决方案，为全球用户带来更智能的生活。我们相信 AI 将在未来扮演至关重要的角色，帮助人类解决各种复杂问题。</p>
+        <p>NAI-Teck 的核心价值观包括创新、合作和责任。我们鼓励团队成员不断挑战自我，探索新的可能性，致力于为客户和社会创造长期价值。</p>
+      </div>
+      <div class="carousel">
+        <img src="./resources/img1.jpg" alt="关于我们1" class="active">
+        <img src="./resources/img2.jpg" alt="关于我们2">
+        <img src="./resources/img3.jpg" alt="关于我们3">
+        <div class="carousel-buttons">
+          <button class="carousel-button" id="prev">‹</button>
+          <button class="carousel-button" id="next">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 NAI-Teck. 所有权利保留。</p>
+  </div>
+</footer>
+
+<script>
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // 滚动时改变header样式
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // 添加滚动动画
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // 选择要观察的元素
+    const animatedElements = document.querySelectorAll('.about-text, .about-image');
+
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        observer.observe(el);
+    });
+
+    const images = document.querySelectorAll('.carousel img');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            if (i === index) {
+                img.classList.add('active');
+            }
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        showImage(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
+    });
+
+    // 自动轮播
+    setInterval(() => {
+        nextButton.click();
+    }, 5000);
+</script>
+</body>
+</html>
