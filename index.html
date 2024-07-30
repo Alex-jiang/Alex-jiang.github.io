@@ -10,6 +10,19 @@
             --text-color: #353740;
             --background-color: #ffffff;
         }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none; /* 为移动设备添加一个汉堡菜单 */
+            }
+        }
+        
         body {
             font-family: 'Söhne', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
