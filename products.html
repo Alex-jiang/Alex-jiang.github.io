@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAI-Teck - 产品</title>
+  <style>
+        :root {
+            --primary-color: #333333;
+            --secondary-color: #2ecc71;
+            --text-color: #333333;
+            --background-color: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .product-section {
+            padding: 100px 0;
+            position: relative;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .product-section:nth-child(odd) {
+            background-color: var(--light-gray);
+        }
+
+        .product-section:nth-child(even) {
+            background-color: var(--background-color);
+        }
+
+        .product-section .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .product-section img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-section .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 50%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .product-section:nth-child(odd) .content {
+            order: 1;
+        }
+
+        .product-section:nth-child(odd) img {
+            order: 2;
+        }
+
+        .product-section:nth-child(even) .content {
+            order: 2;
+        }
+
+        .product-section:nth-child(even) img {
+            order: 1;
+        }
+
+        .product-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-section h3 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .product-section p {
+            font-size: 18px;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .product-section .content.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: var(--dark-gray);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+        }
+
+        footer p {
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .product-section img {
+                width: 100%;
+                height: auto;
+                order: 1 !important;
+            }
+
+            .product-section .content {
+                max-width: 100%;
+                order: 2 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">NAI-Teck</a>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="index.html#research">研究</a></li>
+        <li><a href="products.html">产品</a></li>
+        <li><a href="introduce.html">公司</a></li>
+        <li><a href="modul.html">博客</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="product-section" id="ai-assistant">
+  <div class="container">
+    <div class="content">
+      <h3>AI助手</h3>
+      <p>智能化的个人助理，能够理解自然语言指令，协助您完成日常任务，提高工作效率。</p>
+    </div>
+    <img src="./resources/products_1.jpg" height="300px" width="400px" alt="AI助手">
+  </div>
+</section>
+
+<section class="product-section" id="image-recognition">
+  <div class="container">
+    <img src="./resources/products_2.jpg" height="300px" width="400px" alt="图像识别系统">
+    <div class="content">
+      <h3>图像识别系统</h3>
+      <p>先进的计算机视觉技术，能够快速准确地识别和分类图像，广泛应用于安防、医疗等领域。</p>
+    </div>
+  </div>
+</section>
+
+<section class="product-section" id="data-analysis">
+  <div class="container">
+    <div class="content">
+      <h3>数据分析平台</h3>
+      <p>强大的数据处理和分析工具，帮助企业从海量数据中提取有价值的信息，支持决策制定。</p>
+    </div>
+    <img src="./resources/products_3.jpg" height="300px" width="400px" alt="数据分析平台">
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 NAI-TECK. 所有权利保留。    作者: JiangWen</p>
+  </div>
+</footer>
+
+<script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // 触发内容动画
+        const contents = document.querySelectorAll('.content');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        contents.forEach(content => {
+            observer.observe(content);
+        });
+    </script>
+</body>
+</html>
