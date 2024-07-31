@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>技术模块展示 - NAI-TECK</title>
+  <title>作者信息 - NAI-TECK</title>
   <style>
         :root {
             --primary-color: #333333;
@@ -29,6 +29,39 @@
             padding: 0 20px;
         }
 
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2980b9;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .info p, .section p {
+            margin: 5px 0;
+        }
+        .highlight {
+            background-color: #000000;
+            color: #fff;
+            padding: 5px 8px;
+            border-radius: 3px;
+            font-size: 30px
+        }
         header {
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -87,52 +120,9 @@
             color: var(--primary-color);
         }
 
-        .module-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
 
-        .module-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            cursor: pointer;
-        }
 
-        .module-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
 
-        .module-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .module-item:hover .module-icon {
-            transform: scale(1.1);
-        }
-
-        .module-item h3 {
-            font-size: 24px;
-            margin: 0 0 15px;
-            color: var(--primary-color);
-        }
-
-        .module-item p {
-            font-size: 16px;
-            color: var(--text-color);
-            margin-bottom: 0;
-        }
 
         footer {
             background-color: var(--dark-gray);
@@ -145,26 +135,6 @@
             color: var(--text-color);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .module-item {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .module-item:nth-child(1) { animation-delay: 0.1s; }
-        .module-item:nth-child(2) { animation-delay: 0.2s; }
-        .module-item:nth-child(3) { animation-delay: 0.3s; }
-        .module-item:nth-child(4) { animation-delay: 0.4s; }
 
         @media (max-width: 1024px) {
             .module-grid {
@@ -231,40 +201,47 @@
 
 <section class="modules">
   <div class="container">
-    <h2>核心技术模块</h2>
+    <h1>作者信息</h1>
+    <div class="section-title">基本信息</div>
+    <div class="info">
+      <p><span class="highlight">姜文</span></p>
+      <p>男 &nbsp&nbsp  | &nbsp&nbsp 1987 年 &nbsp &nbsp |&nbsp &nbsp  本科</p>
+      <p>毕业院校：东北大学东软信息学院 </p>
+      <p>毕业年份：2010年</p>
+      <p>工作经验：14年</p>
+      <p> E-mail： jiangxuchen_12@126.com</p>
+    </div>
 
-    <div class="module-grid">
-      <div class="module-item" id="springcloud">
-        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-4H7V8h4v8zm6 0h-2v-4h-2V8h4v8z"/>
-        </svg>
-        <h3>SpringCloud</h3>
-        <p>灵活的微服务架构，提供服务发现、配置管理和负载均衡。</p>
-      </div>
+    <div class="section">
+      <div class="section-title">岗位信息</div>
+      <p>工作性质：全职 </p>
+      <p>工作地区：沈阳\上海\青岛</p>
+      <p>所在职业：软件\互联网\物联网\系统集成\人工智能</p>
+      <p>目前职位：车联网负责人\车联网高级项目经理</p>
+    </div>
 
-      <div class="module-item" id="k8s">
-        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333">
-          <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 3.6l4.5 2.5L12 10.6 7.5 8.1 12 5.6zm-6 6.7l5 2.8v5.6l-5-2.8v-5.6zm12 0v5.6l-5 2.8v-5.6l5-2.8z"/>
-        </svg>
-        <h3>K8S</h3>
-        <p>强大的容器编排平台，实现自动化部署、扩展和管理。</p>
-      </div>
-
-      <div class="module-item" id="bigdata">
-        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"/>
-        </svg>
-        <h3>大数据</h3>
-        <p>全面的数据处理解决方案，支持分布式存储和高效分析。</p>
-      </div>
-
-      <div class="module-item" id="ai">
-        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333">
-          <path d="M21 10.5h-1v-3a1.5 1.5 0 0 0-1.5-1.5h-5.25V4.5a1.5 1.5 0 0 0-1.5-1.5h-4.5A1.5 1.5 0 0 0 5.75 4.5V6H4.5A1.5 1.5 0 0 0 3 7.5v3H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v3a1.5 1.5 0 0 0 1.5 1.5h5.25v1.5a1.5 1.5 0 0 0 1.5 1.5h4.5a1.5 1.5 0 0 0 1.5-1.5V19.5h5.25a1.5 1.5 0 0 0 1.5-1.5v-3h1a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM9 16.5H6v-9h3v9zm9 0h-3v-9h3v9z"/>
-        </svg>
-        <h3>AI</h3>
-        <p>先进的机器学习和深度学习技术，支持智能决策和预测分析。</p>
-      </div>
+    <div class="section">
+      <div class="section-title">自我评价</div>
+      <p>• 具有14年的BS软件开发工作及10年的项目管理经验，2年的部门管理经验，2年的智能座舱软件项目管理经验</p>
+      <p></p>
+      <p>• 具有14年的BS软件开发经验和9年的BS软件架构经验，能够独立完成项目的需求分析、需求细化、识别项目依赖、原型设计、模式设计、数据库设计、详细设计等项目开发的前期工作，并完成相应的开发编码，自测及高质量交付工作</p>
+      <p></p>
+      <p>• 具有10年的团队管理经验，精通项目管理工作，并能够带领几十人团队成员完成项目的开发工作，善于制定计划，识别风险，工作委派，权利下放，任务跟踪，原因分析，制定对策，及时识别偏差，做出调整，同时对团队可进行业务和技术的相关培训 </p>
+      <p></p>
+      <p>• 具有2年多的部门管理经验，对部门的搭建，部门预算，能力建设预算，项目预算，业务规划，团队建设，日常管理和团队管理及交付都有丰富经验</p>
+      <p></p>
+      <p>• 个人综合能力较强，善于学习、沟通、思考、协作，最终达到项目团队制定的目标。在之前的工作中，多次被评为优秀员工，月度之星、年度之星、创业先锋，创新先锋、集团十大优秀团队，部门优秀团队等荣誉。拥有2项专利</p>
+      <div class="section-title"></div>
+      <p>• 曾主导过多家主机厂的TSP、LBS、CPSP、CMS、CRM、ERP、OTA等车联网以及电商物流系统，以及小初高的K12教育平台开发交付</p>
+      <p>• 熟练使用阿里云、华为云</p>
+      <p>• 精通Java及各种Web开发框架(springboot、springcloud alibaba、Mybatis等)</p>
+      <p>• 精通关系型(mysql、oracle、sqlServer)与非关系型数据库(mongoDB、elasticSearch)开发，应用缓存技术(redis)及消息队列(Kafka、MQTT)</p>
+      <p>• 熟练使用大数据CDH5各种组件以及MPP计算引擎Presto</p>
+      <p>• 熟练应用Linux系统，负载均衡，各种应用服务器Tomcat、Apache、Nginx</p>
+      <p>• 熟练使用Docker和K8S</p>
+      <p>• 掌握SSL\TLS通信机制，证书链，自签证书以及PKI</p>
+      <p>• 熟练使用测试工具(ab、postman、charles、Jmeter)、持续集成工具、构建及管理工具(jenkins、git、svn)，以及代码质量工具(sonar)</p>
+      <p>• 熟练使用Python，numpy、pandas、pyTorch2等，掌握深度学习感知机、神经网络、正反向传播、NLP、Transformer原理以及Fine-Tuning</p>
 
     </div>
   </div>
