@@ -286,6 +286,13 @@ menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 });
 
+
+const springcloud = document.getElementById('springcloud');
+
+springcloud.addEventListener('click', () => {
+    window.open('https://alex-jiang.github.io/javaweb', '_blank');
+});
+
 // 点击导航项后关闭菜单
 document.querySelectorAll('nav ul li a').forEach(item => {
     item.addEventListener('click', () => {
